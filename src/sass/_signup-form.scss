@@ -5,230 +5,73 @@
     .background {
         width: 100vw;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.644);
+        background-color: rgba(0, 0, 0, 0.486);
         display: flex;
         align-items: center;
         justify-content: center;
+    }
 
-        .signup-form {
-            position: relative;
-            padding: 2rem;
-            background: linear-gradient(to bottom, rgba(190, 190, 190, 0.925),rgba(201, 201, 201, 0.904));
-            width: 25%;
-            height: 60%;
-            border-radius: 1rem;
-            box-shadow: 0 0 3rem #000;
+    &-form {
+        position: relative;
+        width: 90vw;
+        max-width: 35rem;
+        height: 50rem;
+        background-color: rgba(255, 255, 255, 0.945);
+        border-radius: 5px;
+        box-shadow: 0 0 50px rgb(0, 0, 0);
+        
+        h2 {
+            text-align: center;
+            padding: 3rem 3rem 2rem;
+            font-size: 2.9rem;
+        }
+
+        h3 {
+            text-align: center;
+            padding: 0 3rem 3rem;
+            font-size: 1.4rem; 
+            font-weight: 500;
+        }
+
+        .btnCloseForm {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background-color: transparent;
+            border: none;
+            font-weight: 600;
+            font-size: 1.8rem;
+            
+            color:  rgba(128, 128, 128, 0.76);
+            padding: .5rem 1rem;
+            cursor: pointer;
+        }
+
+        &__form {
             display: flex;
             flex-direction: column;
             align-items: center;
 
-            .btnCloseForm {
-                position: absolute;
-                top: 3rem;
-                right: 3rem;
-                width: 4rem;
-                height: 4rem;
-                text-align: center;
-                background-color: transparent;
+            input, select {
+                margin: 1rem;
                 padding: 1rem;
-                border: 1px solid var(--white);
-                color: var(--white);
-                border-radius: 20rem;
+                border-radius: 5px;
+                border: none;
+                background-color: rgb(231, 231, 231);
+            }
+
+            .submit {
+                margin-top: 6rem;
+                width: 120px;
                 cursor: pointer;
-
-                &:focus,
-                &:active {
-                    outline: none;
-                }
             }
 
-            h2 {
-                color: var(--white);
-                font-size: 4rem;
-                font-weight: 400;
-                padding: 2rem;
+            .select {
+              padding: .7rem 1rem;
+              font-size: 1.2rem;
             }
-            form {
-                margin-top: 2rem;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center; 
 
-                input {
-                    width: 60%;
-                    height: 4rem;
-                    margin: 1rem 0;
-                    background-color: var(--white);
-                    border: none;
-                    padding: 1rem 3rem;
-                    color: var(--light-black);
-                    font-size: 1.8rem;
-                    border-radius: 1rem;
-                }
-
-                input:last-child{
-                    margin-top: 6rem;
-                }
-
-                input:active,
-                input:focus {
-                    outline: none;
-                }
-
-               .checkbox {
-                   width: 100%;
-                   display: flex;
-                   justify-content: center;
-                   align-items: center;
-
-                    label {
-                        font-size: 1.4rem;
-                        color: white;
-                    }
-                   #check{
-                       width: 2rem;
-                       background-color: transparent;
-                       margin-right: 2rem;
-                       border: 1px solid var(--white);
-                   }
-               }
-            }
         }
     }
 }
 
-@media(max-width: 1350px) {
-    .signup {
-        position: fixed;
-        z-index: 1500;
-        .background {
-
-            .signup-form {
-                width: 30%;
-                height: 50%;
-
-                .btnCloseForm {
-                    top: 2rem;
-                    right: 2rem;
-                    width: 4rem;
-                    height: 4rem;
-                
-    
-                    &:focus,
-                    &:active {
-                        outline: none;
-                    }
-                }
-    
-                h2 {
-                    color: var(--white);
-                    font-size: 4rem;
-                    font-weight: 400;
-                    padding: 2rem;
-                }
-                form {
-                    margin-top: 2rem;
-                
-    
-                    input {
-                        height: 3rem;
-                    }
-
-                    input:last-child{
-                    margin-top: 4rem;
-                }
-               
-                }
-            }
-        }
-    }
-}
-
-@media(max-width: 1000px) {
-    .signup {
-        position: fixed;
-        z-index: 1500;
-        .background {
-            
-            .signup-form {
-                width: 50%;
-
-                .btnCloseForm {
-                    top: 2rem;
-                    right: 2rem;
-                    width: 4rem;
-                    height: 4rem;
-                
-    
-                    &:focus,
-                    &:active {
-                        outline: none;
-                    }
-                }
-    
-                h2 {
-                    color: var(--white);
-                    font-size: 4rem;
-                    font-weight: 400;
-                    padding: 2rem;
-                }
-                form {
-                    margin-top: 2rem;
-                
-    
-                    input {
-                        height: 3rem;
-                    }
-
-                        input:last-child{
-                    margin-top: 2rem;
-                }
-                }
-            }
-        }
-    }
-}
-
-@media(max-width: 600px) {
-    .signup {
-        position: fixed;
-        z-index: 1500;
-        .background {
-            
-            .signup-form {
-                width: 80%;
-
-                .btnCloseForm {
-                    top: 2rem;
-                    right: 2rem;
-                    width: 4rem;
-                    height: 4rem;
-                
-    
-                    &:focus,
-                    &:active {
-                        outline: none;
-                    }
-                }
-    
-                h2 {
-                    color: var(--white);
-                    font-size: 4rem;
-                    font-weight: 400;
-                    padding: 2rem;
-                }
-                form {
-                    margin-top: 2rem;
-                
-    
-                    input {
-                        height: 3rem;
-                    }
-               
-                }
-            }
-        }
-    }
-}

@@ -6,6 +6,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media(max-width: 1024px) {
+        height: 100%;
+        padding: 2rem;
+    }
     
     &__container {
         width: 100%;
@@ -42,6 +47,19 @@
                 }
             }
         }
+
+        @media(max-width: 1024px) { 
+            flex-direction: column;
+
+            ul {
+                flex-direction: column;
+
+                li {
+                    margin: 1rem;
+                    text-align: center;
+                }
+            }
+        }
     }
 
 
@@ -74,27 +92,8 @@
             height: 20%;
             transition: .3s all ease-in;
         }
+
+        @media(max-width: 1024px) { display: none; }
     }
 }
 
-@media(max-width: 1024px) {
-    .footer {
-        height: 100%;
-        padding: 2rem;
-        &__container {
-            flex-direction: column;
-
-            ul {
-                flex-direction: column;
-
-                li {
-                    margin: 1rem;
-                    text-align: center;
-                }
-            }
-            .goUpBtn {
-                display: none;
-            }
-        }
-    }
-}

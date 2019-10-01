@@ -24,12 +24,25 @@
                 font-size: 7rem;
                 color: var(--white);
                 line-height: 1.2;
+                padding: 0 1rem;
             }
 
             h2 {
+                padding: 0 1rem;
                 font-size: 5rem;
                 font-weight: 300;
                 color: var(--white);
+            }
+
+            @media (max-width: 1024px) {
+
+                h1 {
+                    font-size: 5rem;
+                }
+    
+                h2 {
+                    font-size: 4rem;
+                } 
             }
         }
 
@@ -37,24 +50,3 @@
     
 }
 
-@media (max-width: 1024px) {
-  
-    .hero__container {
-
-        .text-box {
-    
-            h1 {
-                font-size: 5rem;
-                color: var(--white);
-                line-height: 1.2;
-            }
-
-            h2 {
-                font-size: 4rem;
-                font-weight: 300;
-                color: var(--white);
-            }
-        }
-    }
-    
-}

@@ -22,7 +22,8 @@ const srcIMG = './src/img/*',
       srcJS = './src/js/*.js',
       distJS = './dist',
       srcSASS = './src/sass/main.scss',
-      distCSS = './dist/css';
+      distCSS = './dist/css',
+      srcCSS = './src/css';
       
 function Style(){
         return gulp.src(srcSASS)
@@ -31,7 +32,7 @@ function Style(){
         .pipe(autoprefixer('last 2 versions'))
         .pipe(sourcemaps.write())
         .pipe(lineEndingCorrector())
-        .pipe(gulp.dest(distCSS))
+        .pipe(gulp.dest(srcCSS))
     }
 
 function MoveHTML(){
@@ -99,7 +100,9 @@ function watch() {
     })
    
    gulp.watch('./src/sass/*.scss', Style)
+   gulp.watch('./src/js/*.js', javascript)
    gulp.watch('./src/index.html').on('change', browserSync.reload)
+   gulp.watch('./src/js/*.js').on('change', browserSync.reload)
    gulp.watch('./src/css/*.css').on('change', browserSync.reload)
 }
 
